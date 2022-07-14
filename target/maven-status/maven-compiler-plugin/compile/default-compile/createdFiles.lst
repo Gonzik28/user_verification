@@ -1,0 +1,5 @@
+com\gonzik28\user_verification\Application.class
+com\gonzik28\user_verification\service\UserService.class
+com\gonzik28\user_verification\dto\ResponseUserDto.class
+com\gonzik28\user_verification\dto\RequestUserDto.class
+com\gonzik28\user_verification\controller\UserController.class

@@ -1,0 +1,12 @@
+Добавить следующие файлы: jacob-1.14.3-x64.ddl и jacob-1.14.3-x84.dll
+из папки user_verification\libs\jacob-1.18
+внутрь системных папок:
+
+/ Java / jdk / jre / bin
+/ Java / jdk / jre / lib / ext
+/ Java / jre1.8.0_202 / bin
+
+файл *.bat расположен на пути user_verification\target
+
+Запустить приложение на порту
+http://localhost:8090/
