@@ -30,10 +30,10 @@ public class UserService {
     }
 
     public String findByUserName(String userName) {
-        String resultMassage = "Пользователя " +  userName + " нет";
+        String resultMassage = "Пользователя " + userName + " нет";
         List<String> list = getUserNames();
-        for (int i = list.size()-1; i>=0; i--){
-            if(userName.equals(list.get(i))){
+        for (int i = list.size() - 1; i >= 0; i--) {
+            if (userName.equals(list.get(i))) {
                 resultMassage = "Пользователь " + list.get(i) + " есть";
             }
         }

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Форма ответа</title>
+
+</head>
+<body>
+<span th:text="${answer}"></span>
+
+<input value="Назад" type="button" onclick="getUrlBask()"/>
+
+<script type="text/javascript">
+
+    function getUrlBask() {
+        let way = "http://localhost:8090";
+        return location.href = way;
+    }
+
+</script>
+
+</body>
+</html>

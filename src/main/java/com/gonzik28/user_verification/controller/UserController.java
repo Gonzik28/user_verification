@@ -3,11 +3,14 @@ package com.gonzik28.user_verification.controller;
 import com.gonzik28.user_verification.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 
-@RestController
+@Controller
 public class UserController {
 
     @Autowired
@@ -20,9 +23,11 @@ public class UserController {
     }
 
     @GetMapping(value = "/user/{userName}")
-    public ResponseEntity<String> UserController(@PathVariable String userName) {
+    public ModelAndView findUser(@PathVariable String userName, ModelAndView modelAndView) {
+        modelAndView.setViewName("result");
         String massage = userService.findByUserName(userName);
-        return ResponseEntity.ok(massage);
+        modelAndView.addObject("answer", massage);
+        return modelAndView;
     }
 
 }
